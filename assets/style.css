@@ -49,7 +49,7 @@ body {
 }
 
 .wrap {
-  max-width: 54rem;
+  max-width: 50rem;
   margin-inline: auto;
   padding-inline: max(1.25rem, env(safe-area-inset-left, 0px)) max(1.25rem, env(safe-area-inset-right, 0px));
 }
@@ -155,7 +155,7 @@ a:focus-visible { outline: 2px solid var(--l3); outline-offset: 3px; border-radi
 
 .row {
   display: grid;
-  grid-template-columns: 8.5rem minmax(0, 37rem);
+  grid-template-columns: 8.5rem minmax(0, 1fr);
   column-gap: 2rem;
   margin-top: 3.5rem;
 }
@@ -213,7 +213,7 @@ a:focus-visible { outline: 2px solid var(--l3); outline-offset: 3px; border-radi
 
 /* Long-form text */
 
-.prose { font-size: 1.12rem; line-height: 1.62; }
+.prose { max-width: 35rem; font-size: 1.12rem; line-height: 1.62; }
 .prose > :first-child { margin-top: 0; }
 .prose p, .prose ul, .prose ol { margin: 0 0 1.15em; }
 .prose li { margin-bottom: 0.3em; }
