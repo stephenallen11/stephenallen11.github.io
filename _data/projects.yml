@@ -1,0 +1,8 @@
+# One entry per project, newest first. They appear on the home page and on
+# /projects/. `url` and `description` are optional. Example:
+#
+# - name: My project
+#   year: 2026
+#   url: https://github.com/stephenallen11/my-project
+#   description: One sentence on what it is and why it's interesting.
+[]

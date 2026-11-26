@@ -1,0 +1,16 @@
+title: Stephen Allen
+author: Stephen Allen
+description: Notes on energy, politics and other interesting things, plus projects I'm working on.
+lang: en
+github_username: stephenallen11
+
+permalink: /:title/
+markdown: kramdown
+timezone: Europe/London
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="intro">
+  <h1>Hi, I'm Stephen.</h1>
+  <p>
+    This is where I write about energy, politics and whatever else I find
+    interesting, and where I post the projects I'm working on.
+  </p>
+</section>
+
+<section>
+  <h2>Posts</h2>
+  {% include post-list.html posts=site.posts limit=8 %}
+  {% if site.posts.size > 8 %}<p class="more"><a href="{{ '/posts/' | relative_url }}">All posts &rarr;</a></p>{% endif %}
+</section>
+
+{% if site.data.projects and site.data.projects.size > 0 %}
+<section>
+  <h2>Projects</h2>
+  {% include project-list.html projects=site.data.projects %}
+</section>
+{% endif %}

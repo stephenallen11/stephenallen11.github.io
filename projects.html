@@ -1,0 +1,10 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+{% if site.data.projects and site.data.projects.size > 0 %}
+{% include project-list.html projects=site.data.projects %}
+{% else %}
+<p class="muted">Nothing here yet. More soon.</p>
+{% endif %}

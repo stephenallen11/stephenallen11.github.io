@@ -1,0 +1,11 @@
+<ul class="list projects">
+  {%- for project in include.projects %}
+  <li>
+    <span class="year">{{ project.year }}</span>
+    <div>
+      {% if project.url %}<a href="{{ project.url }}">{{ project.name }}</a>{% else %}<strong>{{ project.name }}</strong>{% endif %}
+      {%- if project.description %}<p>{{ project.description }}</p>{% endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
