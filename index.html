@@ -11,7 +11,8 @@ layout: default
 
 <section>
   <h2>Posts</h2>
-  {% include post-list.html posts=site.posts limit=8 %}
+  {% assign recent = site.posts | slice: 0, 8 %}
+  {% include post-list.html posts=recent %}
   {% if site.posts.size > 8 %}<p class="more"><a href="{{ '/posts/' | relative_url }}">All posts &rarr;</a></p>{% endif %}
 </section>
 
