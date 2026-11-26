@@ -5,23 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
   {% feed_meta %}
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <header class="wrap site-header">
+    <a class="site-name" href="{{ '/' | relative_url }}">{% include mark.html %}{{ site.title }}</a>
     <nav>
-      <a href="{{ '/posts/' | relative_url }}"{% if page.url contains '/posts/' or page.layout == 'post' %} aria-current="page"{% endif %}>Posts</a>
+      <a href="{{ '/posts/' | relative_url }}"{% if page.url == '/posts/' or page.layout == 'post' %} aria-current="page"{% endif %}>Posts</a>
       <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
     </nav>
   </header>
 
-  <main>
+  <main class="wrap">
     {{ content }}
   </main>
 
-  <footer class="site-footer">
+  <footer class="wrap site-footer">
     <span>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}</span>
     <span>
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>

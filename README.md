@@ -9,6 +9,7 @@ Add a file to `_posts/` named `YYYY-MM-DD-short-title.md`:
 ```markdown
 ---
 title: The title of the post
+description: One line shown under the title in post lists (optional).
 tags: [energy]
 ---
 
